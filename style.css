@@ -14,8 +14,10 @@ html, body {
 }
 
 .container{
-    width: 1100px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0px auto;
+    padding: 0px 20px;
     display: table;
 }
 
@@ -92,11 +94,11 @@ nav a{
         margin-top: 20px;
     border-radius: 50%;
         text-align: center;
-    border:"2px solid #ffbf35";
+    border: 2px solid #ffbf35;
         color: #ffbf35;
     margin-left: 10px;
         height: 50px;
-    width:"20px";
+    width: 50px;
         line-height: 50px;
 }
 
@@ -119,6 +121,7 @@ nav a{
 .personalizing{
     height: auto;
     width: 350px;
+    max-width: 100%;
 }
 
 /*Bainer principal de imagem*/
@@ -141,7 +144,9 @@ nav a{
 
 .personalizingImg{
     width:450px;
+    max-width: 100%;
         padding:0px 50px;
+    box-sizing: border-box;
     margin-top:10px;
 }
 
@@ -377,4 +382,205 @@ div[role="progressbar"] {
     font-size: 13px;
     color: #cfcfcf;
     margin-bottom: 16px;
+}
+
+/*=====================================================
+  RESPONSIVE
+=====================================================*/
+
+/* Tablets e ecras medios (ate 1024px) */
+@media (max-width: 1024px) {
+    .container{
+        padding: 0px 30px;
+    }
+
+    .banner-section{
+        margin-top: 15vh;
+    }
+
+    .banner-section h1{
+        font-size: 40px;
+    }
+
+    div[role="progressbar"] {
+        margin-left: 30px;
+    }
+}
+
+/* Tablets em pe / mobile grande (ate 768px) */
+@media (max-width: 768px) {
+    .container{
+        display: block;
+        padding: 0px 24px;
+    }
+
+    .width-33,
+    .width-66,
+    .width-50{
+        width: 100%;
+        float: none;
+    }
+
+    .main-painel{
+        padding-bottom: 20px;
+    }
+
+    .logo{
+        text-align: center;
+        font-size: 32px;
+    }
+
+    nav{
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    nav a{
+        margin: 6px 10px;
+    }
+
+    .banner-section{
+        margin-top: 6vh;
+        text-align: center;
+    }
+
+    .banner-section a{
+        float: none;
+        display: inline-block;
+    }
+
+    .banner-section h1{
+        font-size: 34px;
+    }
+
+    .banner-section h2{
+        font-size: 17px;
+    }
+
+    .personalizing{
+        display: block;
+        margin: 30px auto 0px auto;
+    }
+
+    .personalizingImg{
+        display: block;
+        margin: 10px auto;
+        padding: 0px;
+    }
+
+    .about-us{
+        text-align: center;
+    }
+
+    .about-us table{
+        text-align: left;
+    }
+
+    .width-50.mt-20{
+        margin: 20px auto 0px auto;
+    }
+
+    .main-section{
+        padding: 60px 0px;
+    }
+
+    .heading-text{
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    #skills .width-50:last-child{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div[role="progressbar"] {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .edu-exp{
+        width: 100%;
+        float: none;
+        padding-left: 0px;
+    }
+
+    .experience-content{
+        margin-left: 0px;
+    }
+
+    .project-card,
+    .testimonial-card{
+        flex: 1 1 100%;
+    }
+}
+
+/* Telemoveis (ate 480px) */
+@media (max-width: 480px) {
+    html, body{
+        font-size: 13px;
+    }
+
+    .container{
+        padding: 0px 16px;
+    }
+
+    .logo{
+        font-size: 26px;
+    }
+
+    nav a{
+        font-size: 14px;
+        margin: 5px 8px;
+    }
+
+    .banner-section h1{
+        font-size: 26px;
+    }
+
+    .banner-section h2{
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .banner-section a{
+        height: 40px;
+        width: 40px !important;
+        line-height: 40px;
+    }
+
+    .personalizing{
+        width: 100%;
+        max-width: 280px;
+    }
+
+    table th, table td{
+        font-size: 12px;
+    }
+
+    .heading-text{
+        font-size: 22px;
+    }
+
+    div[role="progressbar"] {
+        width: 80px;
+        height: 80px;
+    }
+
+    .experience-content h2{
+        font-size: 17px;
+    }
+
+    .experience-content h3{
+        font-size: 15px;
+    }
+
+    .project-card,
+    .testimonial-card{
+        padding: 20px;
+    }
 }
